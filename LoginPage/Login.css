@@ -6,10 +6,9 @@
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
-    display: flex; /*화면에 맞게 요소크기가 자동으로 조정*/
     justify-content: center;/*화면에 맞게 요소 위치 조정*/
     align-items: center;/*자식요소를 컨테이너의 center에 맞춤*/
-    height: 100vh;
+    height: 90vh;
     background: url(room.jpg) no-repeat center;
     background-size: cover; /*브라우저 비율에 따른 조절*/
 }
@@ -24,7 +23,7 @@ body::before { /*바디를 꾸미기 위해 가상태그 적용*/
 .login-form {
     position: relative; z-index: 2;
 }
-.login-form h1{
+.login-form h2{
     font-size: 32px; color: #fff;
     text-align: center;/*텍스트*/
     margin-bottom: 60px;
@@ -83,6 +82,45 @@ body::before { /*바디를 꾸미기 위해 가상태그 적용*/
     text-align: center;
 }
 .caption a {
+    font-size: 15px; color: #999;
+    text-decoration: none;
+}
+.login-form .header{
+    width: 90%;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-form .header h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.login-form .nav ul li{
+    display: inline-block;
+    margin:0 10px;
+}
+
+.login-form .nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+.login-form .hero {
+    width: 400px;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.siwoo
+{
+    margin-top: 50px;
+    text-align: center;
     font-size: 15px; color: #999;
     text-decoration: none;
 }
