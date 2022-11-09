@@ -29,7 +29,7 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    appearance: 0;
+    appearance: none;
     border: 0;
     text-decoration: none;
     list-style: none;
@@ -243,6 +243,7 @@ main .insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
+    margin-top: 1rem;
 }
 
 main .insights > div{
@@ -305,12 +306,12 @@ main .insights svg circle {
 }
 
 main .insights .sales svg circle {
-    stroke-dashoffset:  -30;
+    stroke-dashoffset: -30;
     stroke-dasharray: 200;
 }
 
 main .insights .expenses svg circle {
-    stroke-dashoffset:  20;
+    stroke-dashoffset: 50;
     stroke-dasharray: 70;
 }
 
