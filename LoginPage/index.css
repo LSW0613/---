@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/*폰트 주석*/
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    justify-content: center;/*화면에 맞게 요소 위치 조정*/
+    align-items: center;/*자식요소를 컨테이너의 center에 맞춤*/
+    height: 90vh;
+    background: url(room.jpg) no-repeat center;
+    background-size: cover; /*브라우저 비율에 따른 조절*/
+}
+
+body::before { /*바디를 꾸미기 위해 가상태그 적용*/
+    content: "";
+    position: absolute; z-index: 1; /*absolute - 절대적 위치, relative - 상대적 위치, z-index = z축*/
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color:  rgba(0, 0, 0, .7);
+}
+
+.login-form {
+    position: relative; z-index: 2;
+}
+.login-form h2{
+    font-size: 32px; color: #fff;
+    text-align: center;/*텍스트*/
+    margin-bottom: 60px;
+}
+.int-area:first-child { /*로고와 id간의 거리*/
+    margin-top: 0;
+}
+.int-area { /*id와 password 간의 간격*/
+    width: 400px; position: relative;
+    margin-top: 20px;
+}
+.int-area input { 
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent; /*기본값*/
+    border: none; /*테두리두께*/
+    border-bottom: 1px solid #999;
+    font-size: 18px; color: #fff;
+    outline: none; /*테두리 모양*/
+}
+.int-area input:focus + label,
+.int-area input:valid + label {/*클릭될때 글자 변경*/
+    top: -2px;
+    font-size: 13px; color: #166cea;
+}
+.int-area label {/*기본 글자*/
+    position: absolute; left: 10px; top: 15px;
+    font-size: 18px; color: #999;
+    transition: all .5s ease;
+}
+.int-area label.warning {/*아이디, 패스워드 틀렸을시 발동*/
+    color: red !important;
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
+}
+@keyframes warning {/*warning 일시 글자 움직임*/
+    0% {transform: translateX(-8px);}
+    25% {transform: translateX(8px);}
+    50% {transform: translateX(-8px);}
+    75% {transform: translateX(8px);}
+}
+
+.btn-area {margin-top: 30px;}
+.btn-area button {
+    width: 100%; height: 50px;
+    background: hsl(0, 0%, 34%);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.caption {
+    margin-top: 50px;
+    text-align: center;
+}
+.caption a {
+    font-size: 15px; color: #999;
+    text-decoration: none;
+}
+.login-form .header{
+    width: 90%;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-form .header h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.login-form .nav ul li{
+    display: inline-block;
+    margin:0 10px;
+}
+
+.login-form .nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+.login-form .hero {
+    width: 400px;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.siwoo
+{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px; color: #999;
+    text-decoration: none;
+}
